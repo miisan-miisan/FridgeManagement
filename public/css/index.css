@@ -1,0 +1,164 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+table{
+border-collapse: collapse;
+border-spacing: 0;
+width: 100%;
+}
+
+table tr{
+border-bottom: solid 1px #eee;
+}
+
+.editable:hover{
+background-color: #d4f0fd;
+cursor: pointer;
+}
+
+table th,table td{
+text-align: center;
+width: 15%;
+padding: 15px 0;
+}
+
+.button{
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: #d4f0fd;
+  color: #FFF;
+  text-decoration: none;
+  text-align: right;
+  margin: 10px 0;
+}
+
+.button a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+/* boxレイアウト */
+.box{
+  display: flex;
+  width: 100%;
+  background-color: #d4f0fd;
+  border-bottom: solid thin rgb(188, 186, 186);
+}
+
+.leftBox, .centerBox, .rightBox{
+  align-items: center;
+  width: 30%;
+}
+
+.leftBox{
+  display: flex;
+  margin-left: 5%;
+}
+
+.centerBox{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.rightBox{
+  margin: 5%;
+  text-align: right;
+}
+
+.itemName{
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.footer-parts{
+  display: flex;
+  justify-content: space-between
+}
+
+.expiration{
+  text-align: left;
+  margin: 0;
+  padding: .5em .2em;
+}
+
+.edit a{
+  text-decoration: none;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+/* 食べた！（削除）ボタン */
+.ate{
+  margin-bottom:5%;
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  outline: 0;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.ate:hover, .ate:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.ate:active {
+  opacity: .5;
+}
+
+.edit{
+  margin-bottom:5%;
+  background: rgb(0, 119, 255);
+  border: 1px solid rgb(0, 119, 255);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  outline: 0;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.edit:hover, .edit:active{
+  background-color: initial;
+  background-position: 0 0;
+  color: rgb(0, 119, 255);
+}
+
+.edit a:hover{
+  color: rgb(0, 119, 255);
+}
+
+.edit:active {
+  opacity: .5;
+}
