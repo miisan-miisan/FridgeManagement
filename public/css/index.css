@@ -23,26 +23,6 @@ width: 15%;
 padding: 15px 0;
 }
 
-.button{
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  background: #d4f0fd;
-  color: #FFF;
-  text-decoration: none;
-  text-align: right;
-  margin: 10px 0;
-}
-
-.button a{
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-}
-
 /* boxレイアウト */
 .box{
   display: flex;
@@ -65,11 +45,10 @@ padding: 15px 0;
   display: flex;
   text-align: center;
   justify-content: center;
-
 }
 
 .rightBox{
-  margin: 5%;
+  margin-right: 5%;
   text-align: right;
 }
 
@@ -98,7 +77,7 @@ padding: 15px 0;
 
 /* 食べた！（削除）ボタン */
 .ate{
-  margin-bottom:5%;
+  margin:5% 0;
   background: #FF4742;
   border: 1px solid #FF4742;
   border-radius: 6px;
@@ -161,4 +140,33 @@ padding: 15px 0;
 
 .edit:active {
   opacity: .5;
+}
+
+/* 追加ボタン */
+.button{
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: #d4f0fd;
+  color: #FFF;
+  text-decoration: none;
+  text-align: right;
+  margin: 10px 0;
+}
+
+.button a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.button:hover{
+  background: black;
+}
+
+.button a:hover{
+  color: #FFFFFF;
 }

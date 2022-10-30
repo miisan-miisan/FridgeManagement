@@ -60,7 +60,5 @@
               <a href="{{ route('managements.create') }}">＋</a>
             </div>
           </div>
-
-
     </body>
 </html>
