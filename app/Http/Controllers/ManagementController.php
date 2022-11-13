@@ -42,7 +42,7 @@ class ManagementController extends Controller
             $freezeItem['msg'] = $expirationType." ".$expirationStr;
         }
 
-        return view('index', compact('items', 'freezeItems'));
+        return view('home', compact('items', 'freezeItems'));
     }
 
     /**
@@ -70,7 +70,7 @@ class ManagementController extends Controller
             'stock_type' => $request->stockType,
             'created_at' => now()
          ]);
-        return redirect('managements');
+        return redirect('home');
     }
 
     /**
@@ -112,7 +112,7 @@ class ManagementController extends Controller
         $data->stock_type = $request->stockType;
         $data->expiration = $request->expiration;
         $data->save();
-        return redirect('managements');
+        return redirect('home');
     }
 
     /**
@@ -125,6 +125,6 @@ class ManagementController extends Controller
     {
         $item = Item::find($id);
         $item->delete();
-        return redirect('managements');
+        return redirect('home');
     }
 }

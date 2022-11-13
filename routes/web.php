@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ManagementController;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -16,4 +18,16 @@ use App\Http\Controllers\ManagementController;
 */
 
 // Route::get('/', [ShowTopController::class, 'showTop']);
-Route::resource('managements', ManagementController::class);
+
+Auth::routes();
+Route::get('/', [LoginController::class, 'showLoginForm']);
+
+Route::middleware(['auth'])->group(function () {
+  Route::resource('home', ManagementController::class);
+});
+
+// $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+
+
+// Route::get('/home', [App\Http\Controllers\ManagementController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\ManagementController::class, 'index'])->name('home');
