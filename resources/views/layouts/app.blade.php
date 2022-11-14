@@ -9,6 +9,7 @@
 
     <title>{{ config('app.name') }}</title>
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ui.css') }}">
 
 
     <!-- Fonts -->

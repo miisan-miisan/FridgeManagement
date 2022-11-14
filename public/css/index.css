@@ -2,25 +2,15 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-table{
-border-collapse: collapse;
-border-spacing: 0;
-width: 100%;
-}
-
-table tr{
-border-bottom: solid 1px #eee;
-}
-
 .editable:hover{
 background-color: #d4f0fd;
 cursor: pointer;
 }
 
-table th,table td{
-text-align: center;
-width: 15%;
-padding: 15px 0;
+/* タイトル(冷蔵庫・冷凍庫) */
+.title{
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 /* boxレイアウト */
@@ -150,11 +140,9 @@ padding: 15px 0;
   align-items: center;
   width: 30px;
   height: 30px;
-  background: #d4f0fd;
   color: #FFF;
   text-decoration: none;
   text-align: right;
-  margin: 10px 0;
 }
 
 .button a{
