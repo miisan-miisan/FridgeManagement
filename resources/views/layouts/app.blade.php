@@ -27,7 +27,7 @@
                 <a class="navbar-brand" style="color: white;" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" style="border: 1px solid white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -73,7 +73,7 @@
             </div>
         </nav>
 
-        <main class="py-4 main-backcolor" >
+        <main class="py-4" >
             @yield('content')
             @yield('addButton')
         </main>

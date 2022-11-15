@@ -9,7 +9,7 @@ body {
 
 #app{
   height: 100%;
-  background-color: #facd6d;
+  background-color: white;
 }
 
 /* 統一文字色 */
@@ -46,7 +46,7 @@ body {
   display: flex;
   width: 100%;
   background-color: rgb(255, 166, 0);
-  border-bottom: solid thin rgb(188, 186, 186);
+  border: 1px solid white;
 }
 
 .leftBox, .centerBox, .rightBox{
