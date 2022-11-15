@@ -1,0 +1,19 @@
+
+/* 追加ボタン */
+
+.add-button{
+  position:fixed;
+  right:20px;
+  bottom:70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: rgb(255, 166, 0);
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  margin: 10px 0;
+}

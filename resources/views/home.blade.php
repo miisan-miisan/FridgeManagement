@@ -4,21 +4,20 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="margin-bottom: 20px; border: white solid 2px;">
                 <div class="card-header" style="background-color: rgb(255, 166, 0); display: flex; justify-content: space-between">
-                    <div class="title">冷蔵庫</div>
-                    <div class="button"><a href="{{ route('home.create') }}">＋</a></div>
+                    <div class="title font-color-w">冷蔵庫</div>
                 </div>
-                    <div class="card-body">
+                    <div class="card-body  main-backcolor">
                     @foreach ($items as $item)
                     <div class="box">
                         <div class="leftBox">
-                            <div><p class="expiration">{{ $item['msg'] }}</p></div>
+                            <div><p class="expiration font-color-w">{{ $item['msg'] }}</p></div>
                         </div>
-                        <div class="centerBox">
-                            <p class="itemName">{{ $item->name }}</p>
+                        <div class="centerBox main-headercolor">
+                            <p class="itemName font-color-w">{{ $item->name }}</p>
                         </div>
-                        <div class="rightBox">
+                        <div class="rightBox main-headercolor">
                             <div>
                                 <form method="post" action="{{ route('home.destroy', $item->id) }}">
                                     @csrf
@@ -36,19 +35,18 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="margin-bottom: 20px; border: white solid 2px;">
                 <div class="card-header" style="background-color: rgb(255, 166, 0); display: flex; justify-content: space-between">
-                    <div class="title">冷凍庫</div>
-                    <div class="button"><a href="{{ route('home.create') }}">＋</a></div>
+                    <div class="title font-color-w">冷凍庫</div>
                 </div>
-                    <div class="card-body">
+                    <div class="card-body  main-backcolor">
                     @foreach ($freezeItems as $item)
                     <div class="box">
                         <div class="leftBox">
-                            <div><p class="expiration">{{ $item['msg'] }}</p></div>
+                            <div><p class="expiration font-color-w">{{ $item['msg'] }}</p></div>
                         </div>
                         <div class="centerBox">
-                            <p class="itemName">{{ $item->name }}</p>
+                            <p class="itemName font-color-w">{{ $item->name }}</p>
                         </div>
                         <div class="rightBox">
                             <div>
@@ -70,3 +68,9 @@
 </div>
 
 @endsection
+
+@section('addButton')
+<div class="button"><a href="{{ route('home.create') }}" class="add-button">＋</a></div>
+@endsection
+
+

@@ -1,10 +1,38 @@
-body {
-  font-family: 'Nunito', sans-serif;
+html{
+  height: 100%;
 }
 
-.editable:hover{
-background-color: #d4f0fd;
-cursor: pointer;
+body {
+  height: 100%;
+  font-family: 'MS Gothic', sans-serif;
+}
+
+#app{
+  height: 100%;
+  background-color: #facd6d;
+}
+
+/* 統一文字色 */
+.font-color-w{
+  color: white;
+}
+
+.font-color-b{
+  color: black;
+}
+
+/* 背景色 */
+.main-headercolor{
+  background-color: rgb(255, 166, 0);
+}
+
+.main-backcolor{
+  background-color: #facd6d;
+}
+
+/* ボーダー色 */
+.border-color{
+  border-color: gray;
 }
 
 /* タイトル(冷蔵庫・冷凍庫) */
@@ -17,7 +45,7 @@ cursor: pointer;
 .box{
   display: flex;
   width: 100%;
-  background-color: #d4f0fd;
+  background-color: rgb(255, 166, 0);
   border-bottom: solid thin rgb(188, 186, 186);
 }
 
@@ -130,31 +158,4 @@ cursor: pointer;
 
 .edit:active {
   opacity: .5;
-}
-
-/* 追加ボタン */
-.button{
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  color: #FFF;
-  text-decoration: none;
-  text-align: right;
-}
-
-.button a{
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-}
-
-.button:hover{
-  background: black;
-}
-
-.button a:hover{
-  color: #FFFFFF;
 }
