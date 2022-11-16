@@ -159,3 +159,25 @@ body {
 .edit:active {
   opacity: .5;
 }
+
+/* フッター固定メニューバー */
+.footer-menu-bar{
+	position: fixed;       /* 要素の位置を固定する */
+	bottom: 0px;           /* 絶対位置を指定する(下0px) */
+  text-align: center;
+}
+
+/* inputスタイル */
+.input{
+  width: 100%;
+  height: 2em;
+}
+
+/* ラベルスタイル */
+.label{
+  width: 100%;
+  color: white;
+  background-color: rgb(255, 166, 0);
+  margin: 5px 0;
+
+}

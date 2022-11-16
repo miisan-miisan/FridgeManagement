@@ -1,10 +1,9 @@
 
-/* 追加ボタン */
-
+/* +ボタン */
 .add-button{
   position:fixed;
   right:20px;
-  bottom:70px;
+  bottom:50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -16,4 +15,24 @@
   text-decoration: none;
   text-align: center;
   margin: 10px 0;
+}
+
+/* submitボタン */
+.submit-button {
+  display       : inline-block;
+  font-weight: bold;
+  border-radius : 5%;          /* 角丸       */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : rgb(255, 166, 0);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+}
+
+.submit-button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  border        : 2px solid white;    /* 枠の指定 */
 }

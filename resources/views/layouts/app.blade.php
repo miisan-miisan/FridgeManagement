@@ -16,6 +16,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -78,12 +79,24 @@
             @yield('addButton')
         </main>
 
-        <div id="sp-fixed-menu" class="for-sp">
-          <ul>
-            <li><a href="#">お問い合わせ</a></li>
-            <li><a href="#">資料請求</a></li>
-          </ul>
-        </div>
+        @if( Auth::check() )
+            <div class="d-sm-none d-block footer-menu-bar w-100 border-top main-headercolor" style=> 
+              <div class="row m-2">
+                <div class="col">
+                  <a href="{{ route('home.index') }}" style="color: white;text-decoration:none;"><i class="fas fa-home"></i> TOP</a> <!-- TOPへのリンク -->
+                </div>
+                <div class="col">
+                  <a href="#search-within-site" style="color: white;text-decoration:none;"><i class="fas fa-search"></i> 検索</a> <!-- 検索へのページ内リンク -->
+                </div>
+                <div class="col">
+                  <a href="#tag-list" style="color: white;text-decoration:none;"><i class="fas fa-tag"></i> タグ</a> <!-- タグへのページ内リンク -->
+                </div>
+                <div class="col">
+                  <a href="#tag-list" style="color: white;text-decoration:none;"><i class="fas fa-tag"></i> タグ</a> <!-- タグへのページ内リンク -->
+                </div>
+              </div>
+            </div>
+        @endif
     </div>
 </body>
 </html>
