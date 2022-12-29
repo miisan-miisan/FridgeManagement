@@ -1,0 +1,12 @@
+#footerButtons{
+  display: flex;
+}
+
+.footerButton{
+  width: 25%;
+  text-align: center;
+}
+
+.footerButton-a{
+  text-decoration: none;
+}

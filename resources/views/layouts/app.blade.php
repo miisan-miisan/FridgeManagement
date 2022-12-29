@@ -12,14 +12,18 @@
     <link rel="stylesheet" href="{{ asset('css/button.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fixedMenu.css') }}">
 
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @viteReactRefresh
+    @vite(['resources/sass/app.scss', 
+            'resources/css/common.css', 
+            'resources/css/adjustment.css', 
+            'resources/css/comment.css',
+            'resources/js/app.js'])
 </head>
 <body>
     <div id="app">
@@ -80,21 +84,7 @@
         </main>
 
         @if( Auth::check() )
-            <div class="d-sm-none d-block footer-menu-bar w-100 border-top main-headercolor" style=> 
-              <div class="row m-2">
-                <div class="col">
-                  <a href="{{ route('home.index') }}" style="color: white;text-decoration:none;"><i class="fas fa-home"></i> TOP</a> <!-- TOPへのリンク -->
-                </div>
-                <div class="col">
-                  <a href="#search-within-site" style="color: white;text-decoration:none;"><i class="fas fa-search"></i> 検索</a> <!-- 検索へのページ内リンク -->
-                </div>
-                <div class="col">
-                  <a href="#tag-list" style="color: white;text-decoration:none;"><i class="fas fa-tag"></i> タグ</a> <!-- タグへのページ内リンク -->
-                </div>
-                <div class="col">
-                  <a href="#tag-list" style="color: white;text-decoration:none;"><i class="fas fa-tag"></i> タグ</a> <!-- タグへのページ内リンク -->
-                </div>
-              </div>
+            <div id="footerButtons"> 
             </div>
         @endif
     </div>

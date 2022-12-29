@@ -24,10 +24,10 @@ Route::get('/', [LoginController::class, 'showLoginForm']);
 
 Route::middleware(['auth'])->group(function () {
   Route::resource('home', ManagementController::class);
+  Route::get('/chat', [App\Http\Controllers\ChatController::class, 'index'])->name('chat');
 });
 
 // $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
 
 
-// Route::get('/home', [App\Http\Controllers\ManagementController::class, 'index'])->name('home');
 // Route::get('/home', [App\Http\Controllers\ManagementController::class, 'index'])->name('home');

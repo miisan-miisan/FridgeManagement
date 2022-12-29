@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    @if(count($items) > 0)
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card" style="margin-bottom: 20px; border: white solid 2px;">
@@ -33,6 +34,8 @@
             </div>
         </div>
     </div>
+    @endif
+    @if(count($freezeItems) > 0)
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card" style="margin-bottom: 20px; border: white solid 2px;">
@@ -65,6 +68,7 @@
             </div>
         </div>
     </div>
+    @endif
 </div>
 
 @endsection
