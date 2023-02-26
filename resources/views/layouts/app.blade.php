@@ -23,7 +23,9 @@
             'resources/css/common.css', 
             'resources/css/adjustment.css', 
             'resources/css/comment.css',
-            'resources/js/app.js'])
+            'resources/js/app.js',
+            'resources/js/components/Items.jsx',
+    ])
 </head>
 <body>
     <div id="app">

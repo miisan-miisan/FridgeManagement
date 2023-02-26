@@ -27,7 +27,7 @@ class ManagementController extends Controller
             }else{
                 $expirationType = "消費期限";
             }
-            $item['msg'] = $expirationType." ".$expirationStr;
+            $item['msg'] = "$expirationType.$expirationStr";
         }
 
         // 冷凍庫
@@ -39,7 +39,7 @@ class ManagementController extends Controller
             }else{
                 $expirationType = "消費期限";
             }
-            $freezeItem['msg'] = $expirationType." ".$expirationStr;
+            $freezeItem['msg'] = "$expirationType.$expirationStr";
         }
 
         return view('home', compact('items', 'freezeItems'));
@@ -125,6 +125,39 @@ class ManagementController extends Controller
     {
         $item = Item::find($id);
         $item->delete();
-        return redirect('home');
+
+        $items = Item::where('stock_type', 1)->get();
+        $freezeItems = Item::where('stock_type', 9)->get();
+
+        // 冷蔵庫
+        foreach($items as $item){
+            // 期限表示メッセージを作成
+            $expirationStr= date('y.m.d',  strtotime($item->expiration));
+            if($item->expiration_type == 1){
+                $expirationType = "賞味期限";
+            }else{
+                $expirationType = "消費期限";
+            }
+            $item['msg'] = "$expirationType.$expirationStr";
+        }
+
+        // 冷凍庫
+        foreach($freezeItems as $freezeItem){
+            // 期限表示メッセージを作成
+            $expirationStr= date('y.m.d',  strtotime($freezeItem->expiration));
+            if($freezeItem->expiration_type == 1){
+                $expirationType = "賞味期限";
+            }else{
+                $expirationType = "消費期限";
+            }
+            $freezeItem['msg'] = "$expirationType.$expirationStr";
+        }
+
+        $result = [
+            'items' => $items,
+            'freezeItems' => $freezeItems,
+        ];
+        return response($result, 200);
+        // return view('home', compact('items', 'freezeItems'));
     }
 }
